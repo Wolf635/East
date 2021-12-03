@@ -1,0 +1,115 @@
+.header {
+  &__wrapper {
+    display: flex;
+    @media (max-width: 900px) {
+      flex-wrap: wrap;
+      margin-bottom: 100px;
+    }
+  }
+  &__title {
+    width: 88%;
+    margin: 3.7em 0px 0.8em 0px;
+    @media (max-width: 1064px) {
+      font-size: 2.8125rem;
+    }
+    @media (max-width: 900px) {
+      width: 74%;
+      margin: 1.65em 0px 0.8em 0px;
+    }
+  }
+  &__text {
+    width: 86.7%;
+    @media (max-width: 900px) {
+      width: 61.3%;
+    }
+  }
+  &__link {
+    font-family: $--main-font;
+    font-weight: 700;
+    line-height: 24px;
+    color: $color-2;
+    display: inline-block;
+    margin-top: 2.5em;
+    position: relative;
+    margin-bottom: 200px; /*  Временно  */
+    @media (max-width: 900px) {
+      margin-top: 2.4em;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      width: 104px;
+      height: 3px;
+      background-color: #ffce50;
+      bottom: -0.2em;
+      transition: all 0.3s ease 0s;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 104px;
+      height: 3px;
+      background-color: #ffce50;
+      bottom: -0.2em;
+      transition: top 0.3s;
+    }
+  }
+  &__images {
+    width: 123.3%;
+    max-height: 505px;
+    margin-top: 8.8em;
+    // padding: 0px 0px 40.7% 0px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px 0 20px 20px;
+    @media (max-width: 900px) {
+      margin-top: 3.5em;
+      border-radius: 20px 20px 0 20px;
+      // padding: 0px 0px 36.8% 0px;
+      height: 314px;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__image {
+    max-height: 314px;
+  }
+}
+.header__link:hover::after {
+  transition: all 0.3s ease 0s;
+  opacity: 1;
+  top: 0;
+}
+.title {
+  font-size: 3.25rem;
+  font-weight: 600;
+  line-height: 65px;
+  color: $color-2;
+}
+.text {
+  font-family: $--main-font;
+  font-weight: 400;
+  line-height: 24px;
+}
+.header-decor {
+  margin-right: -9.5em;
+  width: 41.7%;
+  height: 787px;
+  top: 0;
+  right: 0;
+  position: absolute;
+  background-color: $color-4;
+  outline: 1px solid rgb(89, 83, 177);
+  @media (max-width: 900px) {
+    height: 747px;
+  }
+}
